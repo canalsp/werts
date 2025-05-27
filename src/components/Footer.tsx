@@ -8,9 +8,14 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold mb-4">Logo</h3>
+            <div className="flex items-center mb-4">
+              <div className="w-8 h-8 bg-blue-600 mr-2 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">△</span>
+              </div>
+              <span className="text-xl font-bold">WERTS</span>
+            </div>
             <p className="text-gray-400 mb-6">
-              Building the future of digital experiences with innovative solutions and cutting-edge technology.
+              Especialistas em painéis elétricos de baixa tensão, comandos e automação industrial.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -28,49 +33,62 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Product */}
+          {/* Produtos */}
           <div>
-            <h4 className="font-semibold mb-4">Product</h4>
+            <h4 className="font-semibold mb-4">Produtos</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">API</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Quadros de Distribuição</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Banco de Capacitores</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Automação Industrial</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Padrões PTTA e TTA</a></li>
             </ul>
           </div>
           
-          {/* Company */}
+          {/* Empresa */}
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h4 className="font-semibold mb-4">Empresa</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Sobre Nós</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Equipe</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Carreiras</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
           
-          {/* Support */}
+          {/* Contato */}
           <div>
-            <h4 className="font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Status</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
-            </ul>
+            <h4 className="font-semibold mb-4">Contato</h4>
+            <div className="space-y-3 text-gray-400">
+              <div className="flex items-center">
+                <span className="text-blue-400 mr-2">📍</span>
+                <div>
+                  <p>Av. Tore Albert Munck, 116</p>
+                  <p>Cotia - SP</p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <span className="text-blue-400 mr-2">📞</span>
+                <p>+55 11 97830-4267</p>
+              </div>
+              <div className="flex items-center">
+                <span className="text-blue-400 mr-2">✉️</span>
+                <p>contato@werts.com.br</p>
+              </div>
+              <div className="flex items-center">
+                <span className="text-blue-400 mr-2">🕒</span>
+                <div>
+                  <p>Segunda a Sexta-feira</p>
+                  <p>7:00 às 17:00</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Logo. All rights reserved.
+            © 2025 Werts. Todos os direitos reservados.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
-          </div>
         </div>
       </div>
     </footer>

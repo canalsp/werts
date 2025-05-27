@@ -6,12 +6,17 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-gray-900">Logo</span>
+          <div className="flex items-center">
+            <div className="flex items-center">
+              <div className="w-8 h-8 bg-blue-600 mr-2 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">△</span>
+              </div>
+              <span className="text-xl font-bold text-gray-900">WERTS</span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -20,20 +25,23 @@ const Header = () => {
               Home
             </a>
             <a href="#" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
-              About
+              Sobre
             </a>
             <a href="#" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
-              Services
+              Produtos
             </a>
             <a href="#" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
-              Contact
+              Normas
+            </a>
+            <a href="#" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
+              Contato
             </a>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors">
-              Get Started
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors">
+              Solicitar Orçamento
             </button>
           </div>
 
@@ -56,16 +64,19 @@ const Header = () => {
                 Home
               </a>
               <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900">
-                About
+                Sobre
               </a>
               <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900">
-                Services
+                Produtos
               </a>
               <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900">
-                Contact
+                Normas
               </a>
-              <button className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors">
-                Get Started
+              <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900">
+                Contato
+              </a>
+              <button className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors">
+                Solicitar Orçamento
               </button>
             </div>
           </div>

@@ -1,21 +1,27 @@
 
 import Header from '@/components/Header';
-import Hero from '@/components/Hero';
+import WertsHero from '@/components/WertsHero';
 import Features from '@/components/Features';
-import Stats from '@/components/Stats';
+import ProductTabs from '@/components/ProductTabs';
+import AboutSection from '@/components/AboutSection';
+import NormasSection from '@/components/NormasSection';
 import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
+import MapSection from '@/components/MapSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-inter">
       <Header />
-      <Hero />
+      <WertsHero />
       <Features />
-      <Stats />
+      <ProductTabs />
+      <AboutSection />
+      <NormasSection />
       <Testimonials />
       <CTA />
+      <MapSection />
       <Footer />
     </div>
   );
