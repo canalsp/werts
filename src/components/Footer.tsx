@@ -3,18 +3,19 @@ import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-900 text-white py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           {/* Company Info */}
-          <div className="md:col-span-1">
+          <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-blue-600 mr-2 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">△</span>
-              </div>
-              <span className="text-xl font-bold">WERTS</span>
+              <img 
+                src="/lovable-uploads/cbeed684-529d-4a25-a2fa-2dd9400ee2ad.png" 
+                alt="Werts Logo" 
+                className="h-8 w-auto brightness-0 invert"
+              />
             </div>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 mb-6 text-sm sm:text-base">
               Especialistas em painéis elétricos de baixa tensão, comandos e automação industrial.
             </p>
             <div className="flex space-x-4">
@@ -35,8 +36,8 @@ const Footer = () => {
           
           {/* Produtos */}
           <div>
-            <h4 className="font-semibold mb-4">Produtos</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="font-semibold mb-4 text-sm sm:text-base">Produtos</h4>
+            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
               <li><a href="#" className="hover:text-white transition-colors">Quadros de Distribuição</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Banco de Capacitores</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Automação Industrial</a></li>
@@ -46,8 +47,8 @@ const Footer = () => {
           
           {/* Empresa */}
           <div>
-            <h4 className="font-semibold mb-4">Empresa</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="font-semibold mb-4 text-sm sm:text-base">Empresa</h4>
+            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
               <li><a href="#" className="hover:text-white transition-colors">Sobre Nós</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Equipe</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Carreiras</a></li>
@@ -57,10 +58,10 @@ const Footer = () => {
           
           {/* Contato */}
           <div>
-            <h4 className="font-semibold mb-4">Contato</h4>
-            <div className="space-y-3 text-gray-400">
-              <div className="flex items-center">
-                <span className="text-blue-400 mr-2">📍</span>
+            <h4 className="font-semibold mb-4 text-sm sm:text-base">Contato</h4>
+            <div className="space-y-3 text-gray-400 text-sm sm:text-base">
+              <div className="flex items-start">
+                <span className="text-blue-400 mr-2 mt-1">📍</span>
                 <div>
                   <p>Av. Tore Albert Munck, 116</p>
                   <p>Cotia - SP</p>
@@ -74,8 +75,8 @@ const Footer = () => {
                 <span className="text-blue-400 mr-2">✉️</span>
                 <p>contato@werts.com.br</p>
               </div>
-              <div className="flex items-center">
-                <span className="text-blue-400 mr-2">🕒</span>
+              <div className="flex items-start">
+                <span className="text-blue-400 mr-2 mt-1">🕒</span>
                 <div>
                   <p>Segunda a Sexta-feira</p>
                   <p>7:00 às 17:00</p>
