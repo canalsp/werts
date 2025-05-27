@@ -2,6 +2,13 @@
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,10 +45,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-sm sm:text-base">Produtos</h4>
             <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-              <li><a href="#" className="hover:text-white transition-colors">Quadros de Distribuição</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Banco de Capacitores</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Automação Industrial</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Padrões PTTA e TTA</a></li>
+              <li><button onClick={() => scrollToSection('produtos')} className="hover:text-white transition-colors text-left">Quadros de Distribuição</button></li>
+              <li><button onClick={() => scrollToSection('produtos')} className="hover:text-white transition-colors text-left">Banco de Capacitores</button></li>
+              <li><button onClick={() => scrollToSection('produtos')} className="hover:text-white transition-colors text-left">Automação Industrial</button></li>
+              <li><button onClick={() => scrollToSection('produtos')} className="hover:text-white transition-colors text-left">Padrões PTTA e TTA</button></li>
             </ul>
           </div>
           
@@ -49,10 +56,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-sm sm:text-base">Empresa</h4>
             <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-              <li><a href="#" className="hover:text-white transition-colors">Sobre Nós</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Equipe</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Carreiras</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              <li><button onClick={() => scrollToSection('sobre')} className="hover:text-white transition-colors text-left">Sobre Nós</button></li>
+              <li><button onClick={() => scrollToSection('normas')} className="hover:text-white transition-colors text-left">Serviços</button></li>
             </ul>
           </div>
           
@@ -87,8 +92,11 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm mb-2">
             © 2025 Werts. Todos os direitos reservados.
+          </p>
+          <p className="text-gray-400 text-xs">
+            Desenvolvido por <a href="https://www.leaderti.com.br" target="_blank" className="text-blue-400 hover:text-blue-300 transition-colors">#TeamLeader - Automações com IA</a>
           </p>
         </div>
       </div>

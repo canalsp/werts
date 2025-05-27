@@ -50,8 +50,16 @@ const Chatbot = () => {
 
   return (
     <>
-      {/* Botão do Chat */}
+      {/* Botão do Chat com Label Flutuante */}
       <div className="fixed bottom-6 right-6 z-50">
+        {/* Label flutuante */}
+        {!isOpen && (
+          <div className="absolute bottom-16 right-0 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap animate-bounce">
+            Posso ajudar?
+            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+          </div>
+        )}
+        
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"

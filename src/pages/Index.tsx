@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import WertsHero from '@/components/WertsHero';
 import Features from '@/components/Features';
 import ProductTabs from '@/components/ProductTabs';
+import ProductGallery from '@/components/ProductGallery';
 import AboutSection from '@/components/AboutSection';
 import NormasSection from '@/components/NormasSection';
 import Testimonials from '@/components/Testimonials';
@@ -22,6 +23,7 @@ const Index = () => {
       </div>
       <div id="produtos">
         <ProductTabs />
+        <ProductGallery />
       </div>
       <div id="normas">
         <NormasSection />
