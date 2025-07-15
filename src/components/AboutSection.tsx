@@ -1,5 +1,63 @@
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { useState, useEffect } from "react";
+import { X } from "lucide-react";
 
 const AboutSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
+  const HistoryContent = () => (
+    <div className="space-y-4">
+      <h3 className="font-bold text-lg text-blue-600 mb-2">WERTS MONTAGEM DE PAINÉIS PROJETOS E COMÉRCIO DE MATERIAIS ELÉTRICOS</h3>
+      
+      <p>
+        Somos a união da empresa W-TEC Serviços Elétricos e Montagem de Painéis há 11 anos no mercado atendendo com excelência e credibilidade o mercado nesses anos. E com muito orgulho em todos esses anos sempre atendemos com excelência todos nossos clientes, estas conquistas se deve a nossa equipe comprometida com a excelência e responsabilidade que tratamos todos nossos projetos, o que era bom agora está melhor com a WERTS. Tornamos nossa empresa muito mais competitiva e dinâmica.
+      </p>
+
+      <h4 className="font-bold text-lg text-blue-600 mt-4">A Werts e Seus Serviços</h4>
+      
+      <p>
+        A Werts se estabelece como uma referência no setor de montagem de painéis elétricos com o fortalecimento dessa união, continuamos oferecendo soluções abrangentes para diversas aplicações. A empresa dedica-se à montagem de painéis de comando, distribuição, bancos de capacitores e automação, atendendo às necessidades de variados segmentos industriais e comerciais.
+      </p>
+
+      <p>
+        Além de sua expertise técnica, a Werts compromete-se em seguir rigorosamente normas e padrões internacionais como PTTA, TTA e o sistema IT médico. Esses padrões são essenciais para garantir a qualidade e a segurança dos produtos fornecidos.
+      </p>
+
+      <p>
+        Em um mercado onde a segurança e a eficiência são primordiais, a Werts destaca-se por sua dedicação à excelência na fabricação de painéis e quadros elétricos, oferecendo soluções que atendem às mais altas especificações técnicas e regulatórias.
+      </p>
+
+      <p>
+        Em termos de segurança, a observância das normas ABNT - NBR reduz significativamente os riscos de curto-circuitos, sobrecargas e outros problemas elétricos que podem comprometer a integridade das instalações e a segurança dos usuários.
+      </p>
+
+      <h4 className="font-bold text-lg text-blue-600 mt-4">A Excelência na montagem de Painéis elétricos, comandos e automação industrial.</h4>
+    </div>
+  );
+
   return (
     <section className="py-20 bg-white relative overflow-hidden">
       {/* Background pattern */}
@@ -47,9 +105,38 @@ const AboutSection = () => {
           </div>
           
           <div className="mt-10">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded font-medium text-lg transition-colors">
-              Conheça Nossa História
-            </button>
+            {isMobile ? (
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded font-medium text-lg transition-colors">
+                    Conheça Nossa História
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-h-[90vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle>Nossa História</DialogTitle>
+                    <button className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+                      <X className="h-4 w-4" />
+                      <span className="sr-only">Fechar</span>
+                    </button>
+                  </DialogHeader>
+                  <HistoryContent />
+                </DialogContent>
+              </Dialog>
+            ) : (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded font-medium text-lg transition-colors">
+                      Conheça Nossa História
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-2xl p-4 text-left space-y-4 bg-white text-gray-800 border border-gray-200 shadow-xl rounded-lg">
+                    <HistoryContent />
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
           </div>
         </div>
       </div>

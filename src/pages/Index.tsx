@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import WertsHero from '@/components/WertsHero';
 import Features from '@/components/Features';
@@ -11,10 +10,13 @@ import CTA from '@/components/CTA';
 import MapSection from '@/components/MapSection';
 import Footer from '@/components/Footer';
 import Chatbot from '@/components/Chatbot';
+import ServicesAndProducts from '@/components/ServicesAndProducts';
+import ParticlesBackground from '@/components/ParticlesBackground';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white font-inter">
+    <main className="relative min-h-screen">
+      <ParticlesBackground />
       <Header />
       <WertsHero />
       <div id="sobre">
@@ -24,6 +26,7 @@ const Index = () => {
       <div id="produtos">
         <ProductTabs />
         <ProductGallery />
+        <ServicesAndProducts />
       </div>
       <div id="normas">
         <NormasSection />
@@ -35,7 +38,7 @@ const Index = () => {
       </div>
       <Footer />
       <Chatbot />
-    </div>
+    </main>
   );
 };
 

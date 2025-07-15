@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -29,7 +28,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-4">
             <button 
               onClick={() => scrollToSection('home')}
               className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
@@ -37,7 +36,13 @@ const Header = () => {
               Home
             </button>
             <button 
-              onClick={() => scrollToSection('sobre')}
+              onClick={() => {
+                const aboutSection = document.querySelector('#sobre h2');
+                if (aboutSection) {
+                  aboutSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                setIsMenuOpen(false);
+              }}
               className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
             >
               Sobre
@@ -94,7 +99,13 @@ const Header = () => {
                 Home
               </button>
               <button 
-                onClick={() => scrollToSection('sobre')}
+                onClick={() => {
+                  const aboutSection = document.querySelector('#sobre h2');
+                  if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                  setIsMenuOpen(false);
+                }}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900"
               >
                 Sobre
