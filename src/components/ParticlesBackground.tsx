@@ -24,9 +24,16 @@ const ParticlesBackground = () => {
               enable: false
             },
             onHover: {
-              enable: false
+              enable: true,
+              mode: "repulse"
             },
             resize: true
+          },
+          modes: {
+            repulse: {
+              distance: 150,
+              duration: 0.4
+            }
           }
         },
         particles: {
@@ -55,7 +62,7 @@ const ParticlesBackground = () => {
               enable: true,
               area: 800
             },
-            value: 60
+            value: 120
           },
           opacity: {
             value: 0.15
