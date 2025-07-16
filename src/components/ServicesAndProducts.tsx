@@ -101,12 +101,12 @@ const ServicesAndProducts = () => {
   ];
 
   const gallery = [
-    "/lovable-uploads/e6d7b6a3-6c42-4e14-b31b-a0f1f135307c.png",
-    "/lovable-uploads/58aac1c9-18ce-44c8-ad2f-109879b01ec0.png",
-    "/lovable-uploads/e9f494c1-d419-44cf-a544-4ea1e92534a7.png",
-    "/lovable-uploads/e6f567aa-e2da-4ee1-bcd0-77f608a90956.png",
-    "/lovable-uploads/f13a6256-2293-44ee-b58b-f300146de487.png",
-    "/lovable-uploads/53a9184b-771d-4e6e-b186-738116625e43.png"
+    "/lovable-uploads/e6d7b6a3-6c42-4e14-b31b-a0f1f135307c.webp",
+    "/lovable-uploads/58aac1c9-18ce-44c8-ad2f-109879b01ec0.webp",
+    "/lovable-uploads/e9f494c1-d419-44cf-a544-4ea1e92534a7.webp",
+    "/lovable-uploads/e6f567aa-e2da-4ee1-bcd0-77f608a90956.webp",
+    "/lovable-uploads/f13a6256-2293-44ee-b58b-f300146de487.webp",
+    "/lovable-uploads/53a9184b-771d-4e6e-b186-738116625e43.webp"
   ];
 
   return (

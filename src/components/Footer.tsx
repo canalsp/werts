@@ -1,5 +1,5 @@
 
-import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/cbeed684-529d-4a25-a2fa-2dd9400ee2ad.png" 
+                src="/lovable-uploads/cbeed684-529d-4a25-a2fa-2dd9400ee2ad.webp" 
                 alt="Werts Logo" 
                 className="h-8 w-auto brightness-0 invert"
               />
@@ -26,18 +26,9 @@ const Footer = () => {
               Especialistas em painéis elétricos de baixa tensão, comandos e automação industrial.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={20} />
-              </a>
+              <a href="https://www.instagram.com/werts_br?igsh=MXE1anN0ODNmbzZ1cA==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+  <Instagram size={20} />
+</a>
             </div>
           </div>
           

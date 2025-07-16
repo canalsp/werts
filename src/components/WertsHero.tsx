@@ -15,37 +15,37 @@ const WertsHero = () => {
 
   const slides = [
     {
-      image: "/lovable-uploads/e6d7b6a3-6c42-4e14-b31b-a0f1f135307c.png",
+      image: "/lovable-uploads/e6d7b6a3-6c42-4e14-b31b-a0f1f135307c.webp",
       title: "Painéis de Baixa Tensão",
       description: "Soluções completas em painéis elétricos para sua empresa",
       section: "produtos"
     },
     {
-      image: "/lovable-uploads/58aac1c9-18ce-44c8-ad2f-109879b01ec0.png",
+      image: "/lovable-uploads/58aac1c9-18ce-44c8-ad2f-109879b01ec0.webp",
       title: "Automação Industrial",
       description: "Tecnologia avançada para controle e monitoramento",
       section: "produtos"
     },
     {
-      image: "/lovable-uploads/e9f494c1-d419-44cf-a544-4ea1e92534a7.png",
+      image: "/lovable-uploads/e9f494c1-d419-44cf-a544-4ea1e92534a7.webp",
       title: "Quadros de Distribuição",
       description: "Qualidade e segurança em distribuição de energia",
       section: "produtos"
     },
     {
-      image: "/lovable-uploads/e6f567aa-e2da-4ee1-bcd0-77f608a90956.png",
+      image: "/lovable-uploads/e6f567aa-e2da-4ee1-bcd0-77f608a90956.webp",
       title: "Projetos Especiais",
       description: "Soluções personalizadas para suas necessidades",
       section: "produtos"
     },
     {
-      image: "/lovable-uploads/f13a6256-2293-44ee-b58b-f300146de487.png",
+      image: "/lovable-uploads/f13a6256-2293-44ee-b58b-f300146de487.webp",
       title: "Banco de Capacitores",
       description: "Eficiência energética para sua instalação",
       section: "produtos"
     },
     {
-      image: "/lovable-uploads/53a9184b-771d-4e6e-b186-738116625e43.png",
+      image: "/lovable-uploads/53a9184b-771d-4e6e-b186-738116625e43.webp",
       title: "QGBT's",
       description: "Controle total da distribuição de energia",
       section: "produtos"
