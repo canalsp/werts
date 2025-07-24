@@ -3,32 +3,32 @@ const ProductGallery = () => {
   const products = [
     {
       title: "Quadros de Distribuição",
-      image: "/lovable-uploads/e6d7b6a3-6c42-4e14-b31b-a0f1f135307c.png",
+      image: "/lovable-uploads/e6d7b6a3-6c42-4e14-b31b-a0f1f135307c.webp",
       description: "Quadros elétricos com componentes de alta qualidade e organização profissional"
     },
     {
       title: "Banco de Capacitores",
-      image: "/lovable-uploads/58aac1c9-18ce-44c8-ad2f-109879b01ec0.png",
+      image: "/lovable-uploads/58aac1c9-18ce-44c8-ad2f-109879b01ec0.webp",
       description: "Sistemas de compensação de energia reativa para eficiência energética"
     },
     {
       title: "Automação Industrial",
-      image: "/lovable-uploads/e9f494c1-d419-44cf-a544-4ea1e92534a7.png",
+      image: "/lovable-uploads/e9f494c1-d419-44cf-a544-4ea1e92534a7.webp",
       description: "Painéis de comando e controle industrial com tecnologia avançada"
     },
     {
       title: "Processo de Montagem",
-      image: "/lovable-uploads/e6f567aa-e2da-4ee1-bcd0-77f608a90956.png",
+      image: "/lovable-uploads/e6f567aa-e2da-4ee1-bcd0-77f608a90956.webp",
       description: "Nossa equipe especializada em montagem de painéis elétricos"
     },
     {
       title: "Componentes Internos",
-      image: "/lovable-uploads/f13a6256-2293-44ee-b58b-f300146de487.png",
+      image: "/lovable-uploads/f13a6256-2293-44ee-b58b-f300146de487.webp",
       description: "Detalhes internos dos painéis com componentes de qualidade"
     },
     {
       title: "Cabeamento Profissional",
-      image: "/lovable-uploads/53a9184b-771d-4e6e-b186-738116625e43.png",
+      image: "/lovable-uploads/53a9184b-771d-4e6e-b186-738116625e43.webp",
       description: "Organização e identificação profissional de cabos e conexões"
     }
   ];

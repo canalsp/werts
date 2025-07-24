@@ -1,9 +1,10 @@
 
 import { useState } from 'react';
 import { MessageCircle, X, Send } from 'lucide-react';
+import { useChatbot } from '@/contexts/ChatbotContext';
 
 const Chatbot = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isChatbotOpen, toggleChatbot } = useChatbot();
   const [messages, setMessages] = useState([
     {
       type: 'bot',
@@ -53,7 +54,7 @@ const Chatbot = () => {
       {/* Botão do Chat com Label Flutuante */}
       <div className="fixed bottom-6 right-6 z-50">
         {/* Label flutuante */}
-        {!isOpen && (
+        {!isChatbotOpen && (
           <div className="absolute bottom-16 right-0 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap animate-bounce">
             Posso ajudar?
             <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
@@ -61,15 +62,15 @@ const Chatbot = () => {
         )}
         
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={toggleChatbot}
           className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
         >
-          {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
+          {isChatbotOpen ? <X size={24} /> : <MessageCircle size={24} />}
         </button>
       </div>
 
       {/* Janela do Chat */}
-      {isOpen && (
+      {isChatbotOpen && (
         <div className="fixed bottom-24 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl z-50 flex flex-col border">
           {/* Header */}
           <div className="bg-blue-600 text-white p-4 rounded-t-lg">

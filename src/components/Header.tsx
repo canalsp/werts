@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
+import { useChatbot } from '@/contexts/ChatbotContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openChatbot } = useChatbot();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -20,7 +22,7 @@ const Header = () => {
           <div className="flex items-center">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/cbeed684-529d-4a25-a2fa-2dd9400ee2ad.png" 
+                src="/lovable-uploads/cbeed684-529d-4a25-a2fa-2dd9400ee2ad.webp" 
                 alt="Werts Logo" 
                 className="h-10 w-auto"
               />
@@ -68,10 +70,17 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex">
+          <div className="hidden md:flex gap-2">
             <button 
-              onClick={() => scrollToSection('contato')}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors"
+              onClick={openChatbot}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors flex items-center gap-2"
+            >
+              <MessageCircle size={16} />
+              Fale Conosco
+            </button>
+            <button 
+              onClick={openChatbot}
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors"
             >
               Solicitar Orçamento
             </button>
@@ -128,12 +137,27 @@ const Header = () => {
               >
                 Contato
               </button>
-              <button 
-                onClick={() => scrollToSection('contato')}
-                className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors"
-              >
-                Solicitar Orçamento
-              </button>
+              <div className="flex flex-col gap-2 mt-4">
+                <button 
+                  onClick={() => {
+                    openChatbot();
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors flex items-center justify-center gap-2"
+                >
+                  <MessageCircle size={16} />
+                  Fale Conosco
+                </button>
+                <button 
+                  onClick={() => {
+                    openChatbot();
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors"
+                >
+                  Solicitar Orçamento
+                </button>
+              </div>
             </div>
           </div>
         )}
