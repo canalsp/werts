@@ -69,7 +69,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <span className="text-blue-400 mr-2">✉️</span>
-                <p>contato@werts.com.br</p>
+                <p>francisco@werts.com.br</p>
               </div>
               <div className="flex items-start">
                 <span className="text-blue-400 mr-2 mt-1">🕒</span>
