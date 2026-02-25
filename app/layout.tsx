@@ -43,6 +43,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#115E59" />
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
+        {GTM_ID && (
+          <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVFZJNNP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+          </noscript>
+        )}
         <Script id="schema-org" type="application/ld+json">
           {`
             {
